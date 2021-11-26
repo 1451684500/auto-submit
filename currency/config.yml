@@ -1,84 +1,87 @@
 user:
   #username 学号或者工号
-  username: '161105024'
+  username: '20202329'
   #tellphone 电话号码
-  tellphone: '15xxxxxxxx8'
+  tellphone: '17581727156'
   #address 地址，定位信息
-  address: 中国四川省成都市金牛区一环路北1段-129号-附9号
+  address: 中国四川省德阳市旌阳区工农街道G350(嘉陵江西路)
   #email 接受通知消息的邮箱
-  email: 461009747@qq.com
-  #lon 当前位置经度，可以访问http://zuobiao.ay800.com/s/27/index.php获取
-  lon: '119.191475'
+  email: 1451684500@qq.com
+  #lon 当前位置经度，可以访问
+
+http://zuobiao.ay800.com/s/27/index.php获取
+  lon: '104.38275580512153'
   #lat 当前位置纬度
-  lat: '26.058264'
+  lat: '31.087701822916667'
   #school 学校全称
-  school: 福州大学
+  school: 四川建筑职业技术学院
 #今日校园相关配置
 cpdaily:
   #表单组默认选项配置
   defaults:
-    #表单默认选项配置，按顺序，注意，只有标必填项的才处理，不会配置就执行generate.py
+    #表单默认选项配置，按顺序，注意，只有标必填项的才处理，不会配置就执行
+
+generate.py
     - default:
         title: 今日所在位置
         type: 1
-        value: 福建省/漳州市/芗城区
+        value: 四川省/德阳市/旌阳区/四川建院
     - default:
-        title: 昨日午检体温
+        title: 最近14天内你是否离开过目前所在地
         type: 2
-        value: 小于37.3度
+        value: 否       - default:
+        title: 上一题如果选是，请填写去了哪里（填写规范XXXX省XXXX市）
+        type: 1
+        value: 否
     - default:
-        title: 今日晨检体温
-        type: 2
-        value: 小于37.3度
-    - default:
-        title: 今日健康状况（可多选）
-        type: 3
-        value: 健康，无症状
-    - default:
-        title: 家庭成员是否有确诊感染、疑似感染新冠肺炎患者或无症状感染者
+        title: 最近14天内是否接触过疑似或确诊患者或密切接触者
         type: 2
         value: 否
     - default:
-        title: 今日是否为入院状态（入院指生病住院）
+        title: 最近14天内是否接触过来自重点疫区人员或密切接触者
         type: 2
         value: 否
     - default:
-        title: 目前是否为新冠肺炎确诊/疑似病例或无症状感染者（若选“是“，必须已与就诊医生确认）
+        title: 是否被医院确定为疑似患新型冠状病毒肺炎
         type: 2
         value: 否
     - default:
-        title: 今日隔离情况
-        type: 2
-        value: 无需隔离
-    - default:
-        title: 今日是否因与确诊病人有密切接触，被当地强制隔离中
+        title: 是否被相关机构实施医学隔离
         type: 2
         value: 否
     - default:
-        title: 今日是否因有发热、咳嗽、乏力、呼吸困难等疑似症状在隔离中
+        title: 昨日晚上实测体温
+        type: 2
+        value: 36.1-36.9℃（正常）
+    - default:
+        title: 今日早上实测体温
+        type: 2
+        value: 36.1-36.9℃（正常）
+    - default:
+        title: 今日中午实测体温
+        type: 2
+        value: 36.1-36.9℃（正常）
+    - default:
+        title: 本人当前是否有发热、乏力、干咳、呼吸困难等症状
         type: 2
         value: 否
     - default:
-        title: 近14日以来，你接触过疫情重点地区流出人员或确诊/疑似新冠肺炎患者等情况
-        type: 2
-        value: 无此类情况
-    - default:
-        title: 近14日以来，你居住、旅行、途经疫情重点地区情况
-        type: 2
-        value: 无此类情况
-    - default:
-        title: 是否在今日入闽
+        title: 共同生活的家人当前是否有发热、乏力、干咳、呼吸困难等症状
         type: 2
         value: 否
     - default:
-        title: 住址是否在今日有变动
+        title: 当前所居住小区（或村庄）是否有确诊病例
         type: 2
         value: 否
     - default:
-        title: 近14日以来，你的共同居住者（包括家庭成员、共同租住人员、共同居住房东家庭成员）有无以下特殊情况（可多选）
-        type: 3
-        value: 无以下特殊情况
-    - default:
-        title: 本人承诺以上所填报的全部内容均属实、准确，不存在任何隐瞒与不实的情况，更无遗漏之处。
+        title: 疫情发生以来是否按要求在家活动，没有随意外出
         type: 2
+        value: 是
+    - default:
+        title: 其他与疫情相关情况请说明（没有就填无）
+        type: 1
+        value: 无
+    - default:
+        title: 本人是否承诺以上所填报的全部内容均属实、准确，不存在任何隐瞒与不实的情况，更无遗漏之处。
+        type: 1
         value: 是
